@@ -1,9 +1,9 @@
 (function(){
 	var content = document.getElementById("dice_content")
-	var dice = new Dice();
+	var diceElement = new DiceElement();
 	var button = document.getElementById("dice_button");
+	content.appendChild(diceElement.element);
 	button.onclick = function(){
-		dice.launch();
-		content.innerHTML = '' + dice.value;
+		diceElement.launchDice();
 	}
 })();
