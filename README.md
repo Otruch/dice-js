@@ -12,10 +12,10 @@ dice.launch()
 alert(dice.value)
 
 ### Create a dice element :
-var element = new DiceElement(path);
+var diceElement = new DiceElement(path);
 
 Path is the path of images directory of dice faces.
 
-body.appendChild(element);
+body.appendChild(diceElement.element);
 diceElement.launchDice();
 alert(diceElement.dice.value);
