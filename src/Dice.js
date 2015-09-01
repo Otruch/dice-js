@@ -30,3 +30,20 @@ DiceElement.prototype.launchDice = function(){
 	this.dice.launch();
 	this.updateElement();
 }
+DiceElement.prototype.launchRoll = function(callback){
+	var self = this;
+	var count = 0;
+	var stepRoll = function(){
+		self.launchDice();
+		count++;
+		if(count > 10)
+		{
+			clearInterval(timerVar);
+			if(typeof(callback) == 'function')
+			{
+				callback(self.dice.value);
+			}
+		}
+	}
+	var timerVar = setInterval(stepRoll,160)
+}
