@@ -26,4 +26,4 @@ diceElement.launchRoll(callback);
 
 callback : function(value) :
 function called when the dice is ending to roll.
-parameter : value : the final value of the dice.
+parameter : value : the final value of the dice, false if the dice is allready rolling
