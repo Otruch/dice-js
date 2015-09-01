@@ -34,7 +34,10 @@ DiceElement.prototype.launchDice = function(){
 DiceElement.prototype.launchRoll = function(callback){
 	if(this.rolling)
 	{
-		callback(false)
+		if(typeof(callback) == 'function')
+		{
+			callback(false)	
+		}
 	}
 	else
 	{
